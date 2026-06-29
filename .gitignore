@@ -1,0 +1,7 @@
+# Environment files - never upload these
+backend/.env
+frontend/.env
+backend/venv/
+backend/__pycache__/
+node_modules/
+build/
