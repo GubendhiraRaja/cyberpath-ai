@@ -10,8 +10,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "http://localhost:3001",
-        "https://cyberpath-ai.vercel.app"
+        "https://cyberpath-ai-blue.vercel.app"
     ],
     allow_methods=["*"],
     allow_headers=["*"],
