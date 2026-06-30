@@ -34,7 +34,7 @@ async def generate_roadmap(data: dict):
         Give a month-by-month plan with topics, labs, and certifications.
         """
         response = client.models.generate_content(
-            model="gemini-2.0-flash", contents=prompt
+            model="gemini-1.5-flash", contents=prompt
         )
         return {"roadmap": response.text}
     except Exception as e:
@@ -54,7 +54,7 @@ async def mock_interview(data: dict):
         3. Ask the next interview question
         """
         response = client.models.generate_content(
-            model="gemini-2.0-flash", contents=prompt
+            model="gemini-1.5-flash", contents=prompt
         )
         return {"reply": response.text}
     except Exception as e:
@@ -76,7 +76,7 @@ async def analyze_resume(data: dict):
         5. Top 3 improvements
         """
         response = client.models.generate_content(
-            model="gemini-2.0-flash", contents=prompt
+            model="gemini-1.5-flash", contents=prompt
         )
         return {"feedback": response.text}
     except Exception as e:
@@ -97,7 +97,7 @@ async def skill_gap(data: dict):
         4. This week action plan (3 steps)
         """
         response = client.models.generate_content(
-            model="gemini-2.0-flash", contents=prompt
+            model="gemini-1.5-flash", contents=prompt
         )
         return {"analysis": response.text}
     except Exception as e:
