@@ -102,3 +102,10 @@ async def skill_gap(data: dict):
         return {"analysis": response.text}
     except Exception as e:
         return {"error": str(e)}
+    
+@app.get("/api/models")
+async def list_models():
+    from google import genai
+    client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    models = client.models.list()
+    return {"models": [m.name for m in models]}
