@@ -10,7 +10,7 @@ export default function Roadmap() {
   const generate = async () => {
     setLoading(true);
     try {
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/roadmap`, {
+      const res = await axios.post(`https://cyberpath-ai-1.onrender.com/api/roadmap`, {
         role, months, experience: 'Beginner'
       });
       setRoadmap(res.data.roadmap);

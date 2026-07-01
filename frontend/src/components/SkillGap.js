@@ -14,7 +14,7 @@ export default function SkillGap() {
     if(selected.length === 0) { alert('Select at least one skill'); return; }
     setLoading(true);
     try {
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/skillgap`, {
+      const res = await axios.post(`https://cyberpath-ai-1.onrender.com/api/skillgap`, {
         skills: selected, role: 'SOC Analyst'
       });
       setAnalysis(res.data.analysis);

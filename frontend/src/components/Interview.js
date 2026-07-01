@@ -16,7 +16,7 @@ export default function Interview() {
     setInput('');
     setLoading(true);
     try {
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/interview`, {
+      const res = await axios.post(`https://cyberpath-ai-1.onrender.com/api/interview`, {
         role:'SOC Analyst', question:lastQ, answer:input
       });
       setMessages(prev=>[...prev, {role:'ai', text:res.data.reply}]);
